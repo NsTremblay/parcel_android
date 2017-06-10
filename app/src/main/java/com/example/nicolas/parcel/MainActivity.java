@@ -14,7 +14,7 @@ import android.view.MenuItem;
 
 import static android.content.ContentValues.TAG;
 
-public abstract class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity  {
 
     protected BottomNavigationView navigationView;
 
@@ -33,7 +33,6 @@ public abstract class MainActivity extends AppCompatActivity implements BottomNa
     @Override
     protected void onStart() {
         super.onStart();
-        updateNavigationBarState();
     }
 
     // Remove inter-activity transition to avoid screen tossing on tapping bottom navigation items
@@ -43,7 +42,7 @@ public abstract class MainActivity extends AppCompatActivity implements BottomNa
         overridePendingTransition(0, 0);
     }
 
-    @Override
+
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         navigationView.postDelayed(() -> {
             int itemId = item.getItemId();
@@ -59,10 +58,6 @@ public abstract class MainActivity extends AppCompatActivity implements BottomNa
         return true;
     }
 
-    private void updateNavigationBarState(){
-        int actionId = getNavigationMenuItemId();
-        selectBottomNavigationBarItem(actionId);
-    }
 
     void selectBottomNavigationBarItem(int itemId) {
         Menu menu = navigationView.getMenu();
@@ -76,7 +71,4 @@ public abstract class MainActivity extends AppCompatActivity implements BottomNa
         }
     }
 
-    abstract int getContentViewId();
-
-    abstract int getNavigationMenuItemId();
 }

@@ -8,4 +8,6 @@
     <string name="profile">Profile</string>
     <string name="history">History</string>
     <string name="home">Home</string>
+    <string name="action_back">Back</string>
+    <string name="action_settings">Settings</string>
 </resources>

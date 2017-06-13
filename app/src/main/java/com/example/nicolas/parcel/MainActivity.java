@@ -22,12 +22,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import static android.content.ContentValues.TAG;
 
-<<<<<<< HEAD
 public class MainActivity extends AppCompatActivity {
 
-=======
-public class MainActivity extends AppCompatActivity  {
->>>>>>> origin/master
+
 
     protected BottomNavigationView navigationView;
     protected ViewFlipper vf;
@@ -45,19 +42,16 @@ public class MainActivity extends AppCompatActivity  {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-<<<<<<< HEAD
-=======
     @Override
     protected void onStart() {
         super.onStart();
->>>>>>> origin/master
+
     }
 
     public void startNewParcelActivity(View v) {
         startActivity(new Intent(this, NewParcelActivity.class));
     }
 
-<<<<<<< HEAD
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -72,7 +66,7 @@ public class MainActivity extends AppCompatActivity  {
                 case R.id.action_profile:
                     vf.setDisplayedChild(2);
                     return true;
-=======
+
 
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         navigationView.postDelayed(() -> {
@@ -83,19 +77,8 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(new Intent(this, HistoryActivity.class));
             } else if (itemId == R.id.action_profile) {
                 startActivity(new Intent(this, ProfileActivity.class));
->>>>>>> origin/master
             }
             return false;
         }
-
-<<<<<<< HEAD
     };
-=======
->>>>>>> origin/master
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 }
